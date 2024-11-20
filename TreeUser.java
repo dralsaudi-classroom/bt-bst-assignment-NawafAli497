@@ -1,8 +1,21 @@
 package com.example.project;
 
 public class TreeUser {
-	private static <T > int recCountLeafs ( BT <T > bt ) {
+	
+	public static <T> int countLeaves( BT <T> bt ) {
 		//i could not solve it at first so i looked and understood the solution in the tutorial
+		if( bt.empty()) {
+		return 0;
+		}
+		bt.find(Relative.Root ) ;
+		return recCountLeafs(bt) ;
+		}
+
+	
+	
+	
+	private static <T > int recCountLeafs ( BT <T > bt ) {
+		
 		if ( bt . isLeaf () )
 		return 1;
 		else {
